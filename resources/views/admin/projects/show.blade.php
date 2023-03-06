@@ -14,7 +14,7 @@
         <th scope="col">Title</th>
         <th scope="col">Content</th>
         <th scope="col">Slug</th>
-        <th scope="col">Linguaggio</th>
+        <th scope="col">info</th>
       </tr>
     </thead>
     <tbody>

@@ -2,12 +2,13 @@
 
 namespace Database\Seeders;
 
-use App\Models\Type;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Str;
+use App\Models\Project;
+use App\Models\Technology;
 
-class TypeSeeder extends Seeder
+class TechnologySeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -16,10 +17,10 @@ class TypeSeeder extends Seeder
      */
     public function run()
     {
-        $types = ['FrontEnd', 'BackEnd', 'FullStack', 'Design', 'DevOps'];
+        $technologies = ['laravel', 'php', 'vue', 'js', 'vite + laravel', 'vite + vue'];
 
-        foreach ($types as $item) {
-            $newType = new Type();
+        foreach ($technologies as $item) {
+            $newType = new Technology();
             $newType->name = $item;
             $newType->slug = Str::slug($newType->name, '-');
             $newType->save();

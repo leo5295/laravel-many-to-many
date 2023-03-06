@@ -12,7 +12,7 @@
             <th scope="col">Slug</th>
             <th scope="col">info</th>
             <th scope="col">Elimina</th>
-            <th scope="col">Modifica</th>
+            <th scope="col">Edit</th>
             <th scope="col">Vedi</th>
           </tr>
         </thead>
