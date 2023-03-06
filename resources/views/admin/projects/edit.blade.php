@@ -39,6 +39,12 @@
               @endforeach
             </select>
         </div>
+        @foreach($technologies as $item)
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value={{$item->id}} name="technologies[]"> 
+          <label class="form-check-label">{{$item->name}}</label>
+        </div>
+        @endforeach
     
         <div class="form-group">
     

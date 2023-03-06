@@ -11,6 +11,7 @@
             <th scope="col">Content</th>
             <th scope="col">Slug</th>
             <th scope="col">info</th>
+            <th scope="col">Tecnologie</th>
             <th scope="col">Elimina</th>
             <th scope="col">Edit</th>
             <th scope="col">Vedi</th>
@@ -23,6 +24,13 @@
               <td>{{$item->content}}</td>
               <td>{{$item->slug}}</td>
               <td>{{$item->type ? $item->type->name : 'senza categoria'}}</td>
+              <td> 
+                @forelse($item->technologies as $tag)
+                {{$tag->name}}
+                @empty
+                Senza categoria
+                @endforelse</p>
+              </td>
               <td>
                 <div>
                   <form action="{{route('admin.projects.destroy', ['project' => $item['slug']] )}}" method="POST">
