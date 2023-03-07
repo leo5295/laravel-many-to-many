@@ -15,6 +15,7 @@
         <th scope="col">Content</th>
         <th scope="col">Slug</th>
         <th scope="col">info</th>
+        <th scope="col">Tech</th>
       </tr>
     </thead>
     <tbody>
@@ -23,6 +24,13 @@
           <td>{{$project->content}}</td>
           <td>{{$project->slug}}</td>
           <td>{{$project->type ? $project->type->name : 'senza categoria'}}</td>
+          <td>
+              @forelse($project->technologies as $item)
+                  <li>{{$item->name}}</li>
+              @empty
+              Nessuna Tecnologia
+              @endforelse
+          </td>
         </tr>  
     </tbody>
   </table>

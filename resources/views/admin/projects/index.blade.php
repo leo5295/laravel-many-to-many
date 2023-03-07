@@ -29,7 +29,7 @@
                 {{$tag->name}}
                 @empty
                 Senza categoria
-                @endforelse</p>
+                @endforelse
               </td>
               <td>
                 <div>
